@@ -1,0 +1,21 @@
+<p>IgxGrid with editing.<br />
+<igx-grid #grid1 [data]="localData" primaryKey="EmployeeID" width="900px" height="550px" [rowEditable]="true">
+  <igx-column field="FirstName" header="First Name"  width="150px" [editable]="true" >
+  </igx-column>
+  <igx-column field="LastName" header="Last Name" width="150px" [editable]="true" >
+  </igx-column>
+  <igx-column field="Country" width="140px" [editable]="true" >
+  </igx-column>
+  <igx-column field="Age" width="110px" dataType="number" [editable]="true" >
+  </igx-column>
+  <igx-column field="RegistererDate" header="Registerer Date" width="180px" dataType="date" [editable]="true">
+    <ng-template igxCell let-value>
+        {{ value | date }}
+    </ng-template>
+  </igx-column>
+    <igx-column field="IsActive" header="Is Active" width="140px" dataType="boolean" >
+    <ng-template igxCell let-cell="cell">
+      <igx-checkbox [ngModel]="cell.value" (ngModelChange)="cell.update($event)"></igx-checkbox>
+    </ng-template>
+  </igx-column>
+</igx-grid>

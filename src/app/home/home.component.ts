@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent  {
-  title = 'Welcome to Ignite UI for Angular!';
+  title = 'Welcome to Mr. Afeez All Prime Technologies Angular Evaluation!';
   constructor() { }
 }
